@@ -9,7 +9,7 @@ import signature from './assets/signature.png';  // Import the signature
 const App = () => {
   const componentRef = useRef(null);
   const companyInfo = {
-    name: "archana INTERNATIONAL GROCERY Pvt Ltd.",
+    name: "ARCHANA INTERNATIONAL GROCERY Pvt Ltd.",
     address: "Unit 803, Lodha Supremus, Saki Vihar Road",
     cityStatePincode: "Powai, Mumbai, Maharashtra, 4000072",
     panNo: "ABCFV3121K",
@@ -71,6 +71,7 @@ const App = () => {
     return items.reduce((total, item) => total + item.totalAmount, 0);
   };
 
+
   const totalAmount = calculateTotalAmount(items);
   const totalAmountInWords = numberToWords.toWords(Math.round(totalAmount));
 
@@ -117,7 +118,9 @@ const App = () => {
           <p>State/UT Code: 27</p>
         </div>
 
+
         <ItemList items={items} totalAmount={totalAmount} totalAmountInWords={totalAmountInWords} />
+        
 
         <div className="signature">
           <img src={signature} alt="Signature" />
